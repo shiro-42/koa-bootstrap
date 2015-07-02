@@ -1,0 +1,19 @@
+/*
+ * Load .env file in process.env
+ */
+require('dotenv').load();
+
+/**
+ * Module dependencies.
+ */
+var app = require('../app');
+
+var port = process.env.PORT || 3000;
+
+/**
+ * Listen on provided port, on all network interfaces.
+ */
+app.listen(port, function () {
+	console.log('Server listening at port ' + port);
+});
+
